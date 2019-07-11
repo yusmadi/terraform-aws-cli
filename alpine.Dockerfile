@@ -36,6 +36,7 @@ RUN apk --no-cache add \
   jq=1.6-r0 \
   python3=3.6.8-r2 \
   openssh-client \
+  dig \
   && ln -s /usr/bin/python3 /usr/bin/python
 COPY --from=terraform /terraform /usr/bin/terraform
 COPY --from=aws-cli /usr/bin/aws* /usr/bin/
